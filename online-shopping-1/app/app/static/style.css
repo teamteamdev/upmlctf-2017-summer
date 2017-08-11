@@ -1,0 +1,35 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+.sidebar-block {
+    background: #afa;
+    box-sizing: border-box;
+    width: calc(33% - 15px);
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.main-block {
+    background: #aaf;
+    box-sizing: border-box;
+    width: calc(67% - 15px);
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.error {
+    border-radius: 2px;
+    background: #faa;
+    color: #aff;
+}

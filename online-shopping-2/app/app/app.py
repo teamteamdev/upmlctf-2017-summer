@@ -1,0 +1,91 @@
+from flask import Flask, render_template, abort, request, redirect, session
+import hashlib
+
+app = Flask(__name__)
+
+goods = [
+    {},
+    {"id": 1, "item": "Флаг России", "url": "http://school4.apatity.ru/userfiles/img/news/mach10/flag.jpg", "price": "5.99"},
+    {"id": 2, "item": "Флаг CTF", "url": "/static/fhfdssgssfhfhdgsh.txt", "price": "29.99"}
+]
+
+
+@app.route('/')
+def main_page():
+    return render_template('main.html')
+
+
+@app.route('/goods/<int:good_id>/')
+def good(good_id):
+    if good_id < 1 or good_id > 2:
+        abort(404)
+    data = goods[good_id]
+    if request.args.get("error"):
+        data["error"] = request.args.get("error")
+    else:
+        data["error"] = ""
+    return render_template("buy.html", **data)
+
+
+@app.route('/start_transaction/')
+def start_transaction():
+    good_id = 0
+    try:
+        good_id = int(request.args["id"])
+    except:
+        abort(403)
+    if good_id < 1 or good_id > 2:
+        abort(403)
+    card_number = request.args.get("card", "")
+    if len(card_number) != 16 or not card_number.isdigit():
+        return redirect("/goods/{}/?error=Wrong+card+number".format(id))
+
+    session["good_id"] = good_id
+    session["card_number"] = card_number
+    session["success"] = False
+    hash_source = str(good_id) + card_number
+    session["code"] = str(int(hashlib.md5(hash_source.encode()).hexdigest(), 16))[-4:]
+    session.setdefault("attempts", 5)
+
+    return redirect('/check_code/')
+
+
+@app.route('/check_code/', methods=["GET", "POST"])
+def check_code():
+    if not session.get("good_id"):
+        return abort(403)
+
+    data = goods[session["good_id"]]
+    data["card_number"] = session["card_number"]
+
+    if session["attempts"] == 0:
+        return render_template("error.html")
+
+    if request.method == "POST":
+        code = request.form.get("code", "")
+        if code == session["code"]:
+            session["success"] = True
+            return redirect('/success/')
+        else:
+            session["attempts"] -= 1
+            data["error"] = "Wrong SMS code"
+    else:
+        data["error"] = ""
+
+    if session["attempts"] == 0:
+        return render_template("error.html")
+
+    return render_template("check_code.html", **data)
+
+
+@app.route('/success/')
+def success():
+    if not session.get("success"):
+        abort(403)
+    data = goods[session["good_id"]]
+    return render_template("success.html", **data)
+
+app.secret_key = 'A0Zr98j/3yX R+XHH-jmN]LWX/,?RT'
+
+if __name__ == '__main__':
+    app.run()

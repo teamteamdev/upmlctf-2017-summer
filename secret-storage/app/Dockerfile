@@ -1,0 +1,4 @@
+FROM sdelrio/docker-minimal-nginx
+
+COPY site /usr/share/nginx/html
+EXPOSE 8080

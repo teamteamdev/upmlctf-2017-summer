@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн-магазин флагов: купить {{ item }}</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="sidebar-block">
+        <h1>Защищенная биржа флагов</h1>
+        <p><a href="/">Главная</a></p>
+        <p><a href="/goods/1/">Флаг России</a></p>
+        <p><a href="/goods/2/">Флаг CTF</a></p>
+        <p>Используется процессинг Банка России</p>
+        <p>Copyright &copy; Правительство России, 8101</p>
+    </div>
+    <div class="main-block">
+        <h1>{{ item }}</h1>
+        <p>{{ price }} долларов РФ</p>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <form action="/start_transaction/" method="GET">
+            <input type="hidden" name="id" value="{{ id }}" />
+            <p><label>Введите номер карты:</label>
+                <input type="text" name="card" maxlength="16" minlength="16" placeholder="AAAABBBBCCCCDDDD" />
+            </p>
+            <button>Продолжить покупку за {{ price }} долларов РФ</button>
+        </form>
+    </div>
+</body>
+</html>
