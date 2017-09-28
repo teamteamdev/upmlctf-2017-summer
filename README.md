@@ -1,7 +1,7 @@
 # UPML CTF 2017 Summer
 
 8 августа 2017 года |
-[Официальный сайт](https://ctf.upml.tech/) |
+[Официальный сайт](https://upmlctf.ru/2017-summer/) |
 **[Результаты](https://github.com/upmlctf/2017-summer/blob/master/SCOREBOARD.md)**
 
 В каждой задаче находится файл `README.md` с условием, `WRITEUP.md` с разбором,
