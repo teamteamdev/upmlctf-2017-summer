@@ -6,4 +6,4 @@ Misc, 150 points
 > Подсказка: uctf, uctf.ml и uctfml не являются флагам к данному таску.
 > Подсказка: кажется, это связано с IP-адресами домена.
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/digger/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

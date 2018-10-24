@@ -9,6 +9,6 @@ Web, 250 points
 > [Вложение](https://web250.ctf.upml.tech/)
 
 *Примечание:* ресурс может не работать после окончания CTF, исходники лежат
-[в поддиректории app](https://github.com/upmlctf/2017-summer/tree/master/online-shopping-2/app/).
+[в поддиректории app](app/).
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/online-shopping-2/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

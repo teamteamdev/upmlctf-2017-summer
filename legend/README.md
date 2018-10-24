@@ -12,4 +12,4 @@ Crypto, 50 points
 >
 > Удачи!
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/legend/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

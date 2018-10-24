@@ -6,4 +6,4 @@ Joy, 75 points
 >
 > [Вложение](https://vk.com/snowlabs)
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/sponsors-job/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

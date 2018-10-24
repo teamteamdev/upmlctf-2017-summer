@@ -7,4 +7,4 @@ Joy, 150 points
 >
 > [Вложение](https://yadi.sk/i/abKLt3DD3LpEuH)
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/investigate/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

@@ -10,4 +10,4 @@ Web, 100 points
 *Примечание:* версия сайта CTF, работающего во время соревнования, может быть
 недоступна в будущем
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/find-somewhere/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

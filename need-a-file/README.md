@@ -9,6 +9,6 @@ Web, 300 points
 > [Вложение](http://47.91.94.243:31337/)
 
 *Примечание:* ресурс может не работать после окончания CTF, исходники лежат
-[в поддиректории app](https://github.com/upmlctf/2017-summer/tree/master/need-a-file/app/).
+[в поддиректории app](app/).
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/need-a-file/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

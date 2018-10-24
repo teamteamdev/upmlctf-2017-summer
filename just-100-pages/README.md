@@ -6,4 +6,4 @@ Stegano, 100 points
 >
 > [Вложение](https://yadi.sk/i/WzwKnbqO3LopeU)
 
-**[Write-up](https://github.com/upmlctf/2017-summer/blob/master/just-100-pages/WRITEUP.md)**
+**[Write-up](WRITEUP.md)**

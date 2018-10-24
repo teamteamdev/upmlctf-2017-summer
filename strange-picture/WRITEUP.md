@@ -1,13 +1,13 @@
 # Strange picture: Write-up
 
 > Мы ещё раз приносим извинения участникам за кривую картинку. PNG-файл,
-> [загруженный на GitHub](https://github.com/upmlctf/2017-summer/blob/master/strange-picture/picture.png),
+> [загруженный на GitHub](picture.png),
 > является корректным.
 
 ## Первый шаг
 
 Ищем похожую картинку в гугле
-![Результаты поиска](https://github.com/upmlctf/2017-summer/blob/master/strange-picture/google.png)
+![Результаты поиска](google.png)
 
 Интересно то, что все они одинакового разрешения, но все они разные — они немного
 сдвинуты относительно друг друга.

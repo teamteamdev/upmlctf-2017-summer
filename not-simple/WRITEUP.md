@@ -23,7 +23,7 @@ with open("part", "wb") as f:
     f.write(data)
 ```
 
-Получаем [бинарный файл с данными](https://github.com/upmlctf/2017-summer/blob/master/not-simple/part).
+Получаем [бинарный файл с данными](part).
 Можно запустить Linux-утилиту `file`, чтобы определить тип файла:
 
 ```
@@ -41,7 +41,7 @@ Enter check number:
 ```
 
 Вообще, перебор чисел тоже бы не помог (это понятно, если взглянуть на
-[исходный код программы](https://github.com/upmlctf/2017-summer/blob/master/not-simple/source.cpp)).
+[исходный код программы](source.cpp)).
 
 Остался последний способ — запустим утилиту `strings`. Она выведет много строк,
 среди которых и найдется флаг к заданию.
